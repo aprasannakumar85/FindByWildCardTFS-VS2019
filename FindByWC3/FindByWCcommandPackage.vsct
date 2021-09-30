@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CommandTable xmlns="http://schemas.microsoft.com/VisualStudio/2005-10-18/CommandTable" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+ 
+
+  <!--This is the file that defines the IDs for all the commands exposed by VisualStudio. -->
+  <Extern href="stdidcmd.h"/>
+
+  <!--This header contains the command ids for the menus provided by the shell. -->
+  <Extern href="vsshlids.h"/>
+
+  <Commands package="guidFindByWCcommandPackage">
+
+    <!--Buttons section. -->
+    <Buttons>
+      <Button guid="guidFindByWCcommandPackageCmdSet" id="FindByWCcommandId" priority="0x0100" type="Button">
+        <Parent guid="guidSourceControlExplorerMenuGroup" id="SourceControlExplorerMenuGroupId" />
+        <Icon guid="guidImages" id="allPic" />
+        <Strings>
+          <ButtonText>Find By Wild Card</ButtonText>
+        </Strings>
+      </Button>
+    </Buttons>
+
+    <!--The bitmaps section is used to define the bitmaps that are used for the commands.-->
+    <Bitmaps>
+      <Bitmap guid="guidImages" href="Resources\find.ico" usedList="allPic"/>
+    </Bitmaps>
+  </Commands>
+
+  <Symbols>
+    <!-- This is the package guid. -->
+    <GuidSymbol name="guidFindByWCcommandPackage" value="{8cad77f2-489c-4013-af35-56d4b7c5727c}" />
+
+    <!-- This is the guid used to group the menu commands together -->
+    <GuidSymbol name="guidFindByWCcommandPackageCmdSet" value="{a42f6f18-5942-4261-b06b-1ea60f9ecf6e}">
+      <IDSymbol name="FindByWCcommandId" value="0x0100" />
+    </GuidSymbol>
+    <GuidSymbol name="guidSourceControlExplorerMenuGroup" value="{ffe1131c-8ea1-4d05-9728-34ad4611bda9}">
+      <IDSymbol name="SourceControlExplorerMenuGroupId" value="0x1111" />
+    </GuidSymbol>
+
+    <GuidSymbol name="guidImages" value="{68476e26-968f-41f1-ae5b-0682d032ac5a}" >
+      <IDSymbol name="allPic" value="1" />
+ </GuidSymbol>
+  </Symbols>
+</CommandTable>
